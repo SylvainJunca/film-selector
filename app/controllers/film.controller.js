@@ -121,20 +121,3 @@ exports.delete = (req, res) => {
     });
   
 };
-
-// Delete all Films from the database.
-exports.deleteAll = (req, res) => {
-
-    Film.deleteMany({})
-    .then(data => {
-      res.send({
-        message: `${data.deletedCount} Films were deleted successfully!`
-      });
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while removing all Films."
-      });
-    });
-};

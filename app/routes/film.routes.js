@@ -18,8 +18,6 @@ module.exports = app => {
     // Delete a Film with id
     router.delete("/:id", films.delete);
   
-    // Create a new Film
-    router.delete("/", films.deleteAll);
   
     app.use('/api/films', router);
   };
