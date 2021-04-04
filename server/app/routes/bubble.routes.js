@@ -1,5 +1,5 @@
 module.exports = app => {
-    const bubbles = require("../controllers/film.controller.js");
+    const bubbles = require("../controllers/bubble.controller.js");
   
     var router = require("express").Router();
   

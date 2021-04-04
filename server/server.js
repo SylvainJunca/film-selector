@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 
 require("./app/routes/film.routes")(app);
 require("./app/routes/user.routes")(app);
+require("./app/routes/bubble.routes")(app);
 
 
 // set port, listen for requests
