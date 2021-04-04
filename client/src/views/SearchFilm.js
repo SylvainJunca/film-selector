@@ -1,6 +1,7 @@
 import { useState, useEffect, Fragment } from "react"; 
 import axios from "axios";
 import { Form, FormControl, InputGroup, Button, Image, Col } from "react-bootstrap";
+import SearchResult from "../components/SearchResults";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
@@ -67,20 +68,8 @@ const Search = () => {
                 </InputGroup.Append>
             </InputGroup> 
         </Form>
-        {filmsList.map(film => {
-            return (
-                <div className="d-flex justify-content-between">
-                    <Image src={film.Poster} style={{maxWidth : "40%"}} fluid/>
-                      <Col>
-                      <p>{film.Title} ({film.Year})</p>
-                    <Button>Add movie</Button>
-
-                      </Col>
-                   
-                </div>
-            )
-        })}
-        {!!hasMoreResult && <Button onClick={() => searchMore()}>Search More</Button> || ""}
+        <SearchResult films={filmsList}/>
+        {!!hasMoreResult && <Button clasName="d-flex justify-content-center" onClick={() => searchMore()}>Search More</Button> || ""}
       </Fragment>
   )
 

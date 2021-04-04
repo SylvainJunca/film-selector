@@ -5,7 +5,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/tutorials" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           Bubble Cinema
         </a>
         <div className="navbar-nav mr-auto">

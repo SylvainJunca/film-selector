@@ -10,7 +10,7 @@ exports.create = (req, res) => {
     return;
   }
 
-  // Create a Tutorial
+  // Create a Film
   const film = new Film({
     title: req.body.title,
     description: req.body.description,

@@ -12,7 +12,7 @@ exports.create = (req, res) => {
 
   const { name, email, password } = req.body;
 
-  // Create a Tutorial
+  // Create a User
   const user = new User({
     name,
     email,
