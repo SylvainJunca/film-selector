@@ -4,7 +4,8 @@ module.exports = mongoose => {
       mongoose.Schema(
         {
           title        : { type : String, required : true },
-          submittedBy  : { type : String, required : true },
+          userId       : { type : String, required : true },
+          bubbleId     : { type : String, required : true },
           watched      : { type : Boolean, default: false },
           comment      : String,
           data         : Object, 

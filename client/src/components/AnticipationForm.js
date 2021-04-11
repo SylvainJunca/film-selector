@@ -5,6 +5,12 @@ const AnticipationForm = ({anticipation, setField}) => {
     return(
         <Form.Row>
             <Form.Group>
+                <Form.Label>
+                Comment
+                </Form.Label>
+                <Form.Control></Form.Control>
+            </Form.Group>
+            <Form.Group>
                 <Form.Label>Anticipation</Form.Label>
                 <Form.Control as="select" defaultValue={1}>
                     <option value={-1}>Nope Nope Nope</option>
@@ -14,7 +20,7 @@ const AnticipationForm = ({anticipation, setField}) => {
                     <option value={1.25}>REALLY pushing to watch this one!</option>
                 </Form.Control>
             </Form.Group>
-            <Form.Group id="formGridCheckbox">
+            <Form.Group  id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Already watched" />
             </Form.Group>
         </Form.Row>

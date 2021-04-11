@@ -62,6 +62,7 @@ const Search = () => {
                 <InputGroup.Append>
                     <Button
                         variant="secondary"
+                        type="submit"
                     >
                     Search
                     </Button>
@@ -69,7 +70,7 @@ const Search = () => {
             </InputGroup> 
         </Form>
         <SearchResult films={filmsList}/>
-        {!!hasMoreResult && <Button clasName="d-flex justify-content-center" onClick={() => searchMore()}>Search More</Button> || ""}
+        {!!hasMoreResult && <Button variant="white" clasName="d-flex justify-content-center" onClick={() => searchMore()}>Search More</Button> || ""}
       </Fragment>
   )
 
